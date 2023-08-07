@@ -1,16 +1,3 @@
-/* body{
-  background: #3c31dd;
-  color: white;}
-main {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 400px;
-    padding-top: 100px;
-} */
-
-
 .bubble::after {
     content: '';
     border-top-left-radius: 50% 100%;
