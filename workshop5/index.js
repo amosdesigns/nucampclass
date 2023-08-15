@@ -75,8 +75,8 @@ const runTest = (bootcamp, student) => {
     console.log("TASK 4: PASS 1/2");
   }
   bootcamp.students = [];
-  if (!bootcamp.listStudents()) {
+  if (!bootcamp.listStudents()) 
     console.log("TASK 4: PASS 2/2");
-  }
 };
+  
 runTest(reactBootcamp, testStudent);
