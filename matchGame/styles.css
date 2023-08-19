@@ -1,0 +1,21 @@
+img{
+  position: absolute;
+}
+
+div{
+  position: absolute;
+  width: 500px;
+  height: 500px;
+}
+
+#rightSide {
+left: 525px;
+background-color: white;
+border-right: 2px solid black;
+/* border-left: 2px solid black; */
+}
+#leftSide {
+  background-color: white;
+left: 500px;
+
+}
