@@ -1,0 +1,180 @@
+ html{
+  font-family: monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+}
+
+  body{
+  max-width: 600px;
+        padding:20px;
+        word-break: break-all;
+      }
+
+input[type="radio"],
+input[type="checkbox"]{
+        display: none;
+      } 
+
+#myForm{
+        display: grid;
+        grid-template-columns: 125px 1fr 1fr;
+        font-size: 1rem;
+        color:white;
+      }
+
+#myForm label{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+}
+
+ #myForm input{
+  background-color: #eaebed;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  width: 300px;
+ line-height: 2;
+  font-size: 1rem;
+}
+
+#myForm .btn{
+  color: white;
+  display:block;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: rgb(166, 3, 3);
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+#myForm .btn:hover{opacity: .75;}
+
+input:not([type="radio"]):not([type="checkbox"]), 
+button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: initial;
+      }
+
+#shoppingList {
+    list-style: none;
+    padding: 0px;
+        }
+
+li{
+   display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+          border-radius: .5rem;
+          box-shadow: #4b6cb7;
+          margin-bottom: 10px;
+   }
+
+li label{
+        display:block;
+        margin-right: 1rem;
+        cursor: pointer;
+}
+
+li .content{
+    flex: 1 1 0%;
+  }
+
+li input {
+        font-size: 1.5rem;
+        color: #182848;
+      }
+
+li .actions{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+li .actions button:hover{
+        opacity: .75;
+      }
+
+.actions button{
+      color: white;
+        background-color: #182848;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 5px;
+        cursor: pointer;
+}
+
+.checked {
+        color: #888;
+        text-decoration: line-through;
+        }
+
+.dot{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #182848;
+  border-color: rgb(2, 37, 68);
+}
+
+.dot::after{
+  content: '';
+  display: block;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  background-color: #182848;
+  box-shadow: 0 0 0 0 #182848;
+  border-radius: 50%;
+  transition: 2s ease-in-out;
+}
+
+input:checked ~ .dot::after{
+  width:18px;
+  height: 18px;
+  opacity: 1;
+}
+
+.done .content input{
+  text-decoration: line-through;
+  color: #888;
+}
+
+
+/* Typing animation */
+.typing-demo {
+  width: 17ch;
+  animation: typing 3s steps(17), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
