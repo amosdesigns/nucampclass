@@ -3,16 +3,15 @@ window.addEventListener("load", () => {
     document.body.removeEventListener("click", gameOver);
     theLeftSide.lastChild.removeEventListener("click", nextLevel);
     alert("Game Over");
-    //end game
+    //end gameOver
   };
 
   let numberOfFaces = 5;
   const theLeftSide = document.getElementById("leftSide");
   const theRightSide = document.getElementById("rightSide");
-  const randomPosition = () => Math.floor((Math.random() * 400) + 1);
+  const randomPosition = () => Math.floor(Math.random() * 400 + 1);
 
   function generateFaces() {
-    //console.log("numberOfFaces:", numberOfFaces);
     for (let i = 0; i < numberOfFaces; i++) {
       const face = document.createElement("img");
       face.src = "./imgs/smile.png";

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Async Document</title>
+</head>
+<body>
+  <script>
+    function firstFunction (){
+      setTimeout(()=>{
+        console.log('First function');
+      }, 1000);
+      };
+
+       function secondFunction (){
+     console.log('second function');
+      };
+    firstFunction();
+    secondFunction();
+  </script>
+  
+</body>
+</html>

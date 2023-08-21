@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Challenge: Virtual Party</title>
+  </head>
+  <body>
+    <h1>Code Challenge: Virtual Party</h1>
+
+    <h2>Scenario</h2>
+    <p>
+      You are hosting a virtual party, and you want to ensure that your guests
+      have an amazing time. You'll need to send out invitations, prepare
+      activities, open the virtual dance floor, give a host speech, and even
+      surprise your guests with a special DJ appearance!
+    </p>
+    <p>
+      In this exercise, you will complete the JavaScript functions to create a
+      simulated virtual party experience using both synchronous and asynchronous
+      programming.
+    </p>
+
+    <button id="launch-button">Launch Party!</button>
+    <hr />
+
+    <h2>Instructions</h2>
+
+    <h3>Task 1: Send Invitations</h3>
+    <ol>
+      <li>Complete the function named <code>sendInvitations</code>.</li>
+      <li>
+        Inside the function, use a <code>for...of</code> loop to iterate over
+        the array of guests.
+      </li>
+      <li>Inside the loop, log a message to invite each guest.</li>
+      <li>
+        In your console, call the <code>sendInvitations</code> function to test
+        it, and make any corrections if necessary.
+      </li>
+    </ol>
+
+    <h3>Task 2: Prepare Party Activities</h3>
+    <ol>
+      <li>Complete the function named <code>prepareActivities</code>.</li>
+      <li>
+        Inside the function, use <code>setTimeout</code> to simulate the time it
+        takes to prepare the activities (2 seconds).
+      </li>
+      <li>
+        Inside the <code>setTimeout</code> callback, log a message announcing
+        that the activities are ready.
+      </li>
+      <li>
+        Call the <code>prepareActivities</code> function to test it in your
+        console.
+      </li>
+    </ol>
+
+    <h3>Task 3: Virtual Dance Floor</h3>
+    <ol>
+      <li>Complete the function named <code>virtualDanceFloor</code>.</li>
+      <li>
+        Inside the function, use <code>setInterval</code> to periodically log a
+        message inviting guests to dance (every 1 second).
+      </li>
+      <li>
+        Inside the <code>setInterval</code> callback, stop after logging 5
+        messages.
+      </li>
+      <li>
+        Call the <code>virtualDanceFloor</code> function to test it in your
+        console.
+      </li>
+    </ol>
+
+    <h3>Task 4: Host Speech</h3>
+    <ol>
+      <li>Complete the function named <code>hostSpeech</code>.</li>
+      <li>Inside the function, log a welcoming message immediately.</li>
+      <li>
+        Use <code>setTimeout</code> to log a second message after a delay (1.5
+        seconds).
+      </li>
+      <li>
+        Call the <code>hostSpeech</code> function to test it in your console.
+      </li>
+    </ol>
+
+    <h3>Challenge Task: Surprise Guest</h3>
+    <ol>
+      <li>Complete the function named <code>surpriseGuest</code>.</li>
+      <li>
+        Inside the function, use <code>setTimeout</code> to log a message
+        announcing the surprise guest after a delay (3 seconds).
+      </li>
+      <li>
+        Call the <code>surpriseGuest</code> function to test it in your console.
+      </li>
+    </ol>
+
+    <h3>Launch Party Event</h3>
+    <ol>
+      <li>
+        Complete the function named <code>launchParty</code> that calls all the
+        party functions in the proper sequence.
+      </li>
+      <li>
+        Create an event listener for the "Launch Party!" button that calls the
+        <code>launchParty</code> function when clicked.
+      </li>
+      <li>Click the button to start your party!</li>
+    </ol>
+
+    <hr />
+
+    <h2>Additional Resources</h2>
+    <ul>
+      <li>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of"
+          >Array iteration with for...of loop</a
+        >
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/setTimeout"
+          >Using setTimeout and setInterval</a
+        >
+      </li>
+    </ul>
+
+    <h2>Submission</h2>
+    <p>
+      Submit the URL to your solutions in the forum below. Happy coding, and
+      enjoy the party!
+    </p>
+
+    <script>
+      // Array of guests for the virtual party
+      const guests = [
+        "Ayaan",
+        "Maria",
+        "Chen",
+        "Oliver",
+        "Fatima",
+        "Satoshi",
+        "Lucia",
+        "Kalani",
+        "Jamal",
+        "Nadia",
+        "Thabo",
+      ];
+
+      // Task 1: Send Invitations
+      function sendInvitations() {
+        // Use a for...of loop to iterate over the guests array
+        // Inside the loop, log a message to invite each guest
+        for (let guest of guests) {
+          console.log(
+            `Hi ${guest}, It's Partytime and you're invited to Jerome's End of Summer Party!`
+          );
+        }
+      }
+
+      // Task 2: Prepare Party Activities
+      function prepareActivities(activities) {
+        // Use setTimeout to simulate the time it takes to prepare the activities (2 seconds)
+        // Inside the setTimeout callback, log a message announcing that the activities are ready
+        const readyActivities = setTimeout(() => {
+          if (activities!='Food'){          console.log(`${activities} is ready.`);}else {console.log(`${activities} is ready. Time to eat.`);}
+        }, 2000);
+      }
+
+      // Task 3: Virtual Dance Floor
+      function virtualDanceFloor() {
+        // Use setInterval to periodically log a message inviting guests to dance (every 1 second)
+        // Inside the setInterval callback, stop after logging 5 messages
+        const danceFloor = (i) =>
+          setInterval(console.log(`It's time to dance, dance, dance!${i}`), 1000);
+        const stopDance = () => clearInterval(danceFloor);
+        for (let i = 0; i <= 4; i++) {
+          danceFloor(i);
+        }
+        stopDance();
+      }
+
+      // Task 4: Host Speech
+      function hostSpeech() {
+        // Log a welcoming message immediately
+        // Use setTimeout to log a second message after a delay (1.5 seconds)
+        console.log(`Welcome to the last party of Summertime 2023!`);
+        const hostSpeech = setTimeout(() => {
+          console.log(`I'm so glad you could all be here tonight!`);
+        }, 1500);
+      }
+      
+      // Challenge Task: Surprise Guest
+      function surpriseGuest() {
+        // Use setTimeout to log a message announcing the surprise guest after a delay (3 seconds)
+        const surprise = setTimeout(() => {
+          console.log(
+            `Tonight! I have a huge surprise, DJ Red Money. take it away DJ!`
+          );
+        }, 3000);
+      }
+
+      // Launch Party Event
+      function launchParty() {
+        // Call all the party functions in the proper sequence
+        // You may need to consider the timing and order of function calls to create a coherent party sequence
+       
+        prepareActivities("Speech");
+        prepareActivities("Dancefloor");
+        sendInvitations()
+         setTimeout(() => {
+          hostSpeech();
+        }, 2000);
+        
+        surpriseGuest();
+        setTimeout(() => {
+          virtualDanceFloor();
+        }, 10000);
+        
+         setTimeout(() => {
+          prepareActivities("Food");
+        }, 10000);
+        
+      }
+
+      // Add an event listener on the "Launch Party!" button to call the launchParty function when clicked
+      const launchButton = document.getElementById("launch-button");
+        launchButton.addEventListener("click", launchParty);
+    </script>
+  </body>
+</html>
