@@ -13,3 +13,8 @@ body{
   padding: 2rem;
   margin: 2rem;
 }
+h2{font-style: italic; color:blueviolet}
+#feedback{
+
+background-color: white;
+}

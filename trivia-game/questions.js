@@ -1,4 +1,4 @@
-[
+const questions = [
   {
     "question": "What is the capital of France?",
     "answer": "Paris"
@@ -119,4 +119,5 @@
     "question": "What's the boiling point of water in Celsius?",
     "answer": "100"
   }
-]
+];
+console.log(`${questions.length} questions are loaded!`);
